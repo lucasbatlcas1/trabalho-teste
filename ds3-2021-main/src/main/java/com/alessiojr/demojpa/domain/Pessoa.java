@@ -10,24 +10,22 @@ import java.time.Instant;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name = "table_pessoa")
+@Entity(name = "Avaliacao")
 public class Pessoa {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    private String instrucoes;
     @Column(name = "nome", length = 64)
     private String nome;
-
+    @Column(name = "nomeProfessor", length = 64)
+    private String nomeP;
     private Instant dataNascimento;
-    private String cpf;
-    private String telefone;
-    private String cep;
-    private String rua;
-    private String bairro;
-    private String cidade;
-    private String uf;
+    private int questoes;
+    private float valor;
+    private int n_tentativas;
+    private float tempodeduracao;
     private Boolean isActive;
 
     public static Pessoa parseNote(String line) {
