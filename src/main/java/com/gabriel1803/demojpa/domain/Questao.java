@@ -6,11 +6,17 @@ import lombok.AllArgsConstructor;
 
 import javax.persistence.*;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity(name = "table_questao")
 public class Questao {
+
+    @OneToMany
+    @JoinColumn(name="id_Questao")
+    private List<Avaliacao_has_Questao> avaliacoesEmQueAparece;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -5,6 +5,8 @@ import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 
 import javax.persistence.*;
+
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 @Data
@@ -12,6 +14,10 @@ import java.util.concurrent.TimeUnit;
 @NoArgsConstructor
 @Entity(name = "table_avaliacao")
 public class Avaliacao {
+    
+    @OneToMany
+    @JoinColumn(name="id_Avaliacao")
+    private List<Avaliacao_has_Questao> questoes;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
