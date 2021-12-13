@@ -15,7 +15,7 @@ public class DemojpaApplication {
 		p.setNome("alessio");
 
 		Avaliacao a = new Avaliacao();
-		a.setNome("avaliacao1");
+		a.setTitulo("avaliacao1");
 
 		System.out.println("Minha Primeira Aplicação");
 	}

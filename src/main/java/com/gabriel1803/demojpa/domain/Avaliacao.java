@@ -17,15 +17,23 @@ public class Avaliacao {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "nome", length = 64)
-    private String nome;
+    @Column(name = "titulo", length = 64, nullable = false)
+    private String titulo;
 
     private String subtitulo;
-    private String assunto;
+
+    @Column(nullable = false)
     private String nomeProfessor;
-    private String questoes;
-    private float valor;
+
+    @Column(nullable = false)
+    private double valorTotal;
+
+    @Column(nullable = false)
     private TimeUnit  tempo;
+
+    @Column(nullable = false)
     private String instrucoes;
+
+    @Column(nullable = false)
     private int numeroTentativas;
 }
