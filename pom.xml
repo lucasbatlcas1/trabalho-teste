@@ -9,7 +9,7 @@
   <relativePath/> <!-- lookup parent from repository -->
 </parent>
 <groupId>com.alessiojr</groupId>
-<artifactId>demoJPA</artifactId>
+<artifactId>demoJPA</artifactId>`
 <version>0.0.1-SNAPSHOT</version>
 <name>demoJPA</name>
 <description>demoJPA</description>
@@ -105,7 +105,7 @@
           </exclude>
         </excludes>
       </configuration>
-    </plugin>
+    </plugin>      
   </plugins>
 </build>
 
